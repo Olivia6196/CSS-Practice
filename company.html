@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevora</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            scroll-behavior: smooth;
+            scroll-padding-top: 200px;
+        }
+        body{
+            background-color: #e0dfddcb;
+        }
+        nav ol{
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            gap: 30px;
+            padding: 10px;
+            padding-bottom: 5px;
+            background-color: white;
+        }
+        nav ol li{
+            list-style-type: none;
+        }
+        nav ol li a{
+            color: #020202;
+            text-decoration: none;
+        }
+        #site{
+            margin-left: 250px;
+            margin-right: 550px;
+            font-size: 28px;
+            font-weight: 500;
+            text-shadow: 0 0 5px #0606fa;
+        }
+        .intro{
+            background-image:  url(./Images/first\ image.jpg);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 90vh;
+        }
+        .overlay{
+            background-color: #02020273;
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 90vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        .intro h2{
+            color: #fafaf7;
+            margin-left: 280px;
+            padding-top: 200px;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        .intro p{
+            color: #fffdfd;
+            margin-left: 280px;
+            font-size: 16px;
+            line-height: 1.5;
+            height: 7px;
+            width: 220px;
+            padding: 5px;
+        }
+        .intro button{
+            margin-left: 290px;
+            margin-top: 85px;
+            padding: 10px;
+            background-color: blue;
+            color: #fafaf7;
+            border: 2px solid blue;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .sub{
+           text-align: center;
+           padding-top: 80px;
+           font-size: 35px; 
+           font-weight: 600;
+           margin-bottom: 30px;
+           text-shadow: 0 0 5px blue;
+        }
+        .Choose{
+           display: flex; 
+           padding: 10px;
+           gap: 20px;
+        }
+        .matter{
+            margin-left: 200px;
+        }
+        .term{
+            margin-right: 200px;
+        }
+        .Choose a{
+            font-size: 50px;
+            margin-left:120px ;
+            color: blue;
+            padding-top: 20px;
+        }
+        .Choose h3{
+            text-align: center;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+        .Choose p{
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 20px;
+            height: 8px;
+            width: 300px;
+            padding: 5px;
+        }
+        .Choose button{
+            margin-top: 60px;
+            padding: 10px;
+            background-color: blue;
+            color: #fafaf7;
+            border: 2px solid blue;
+            border-radius: 5px;
+            margin-left: 100px;
+            font-size: 17px;
+        }
+        #work{
+            padding-top: 150px;
+        }
+        .img{
+            width: 23vw;
+            height: 31vh;
+        }
+        #test{
+            width: 21vw;
+        }
+        #room img{
+            width: 32vw;
+            margin-left: 200px;
+            padding-top: 120px;
+            padding-bottom: 40px;
+        }
+        .work{
+            display: flex;
+            gap: 20px;
+        }
+        #consult{
+            margin-left: 200px;
+        }
+        #employ{
+            margin-right: 200px;
+        }
+        .work h3{
+           font-weight: 600; 
+           padding-top: 15px;
+           padding-bottom: 20px;
+        }
+        .work h4{
+           font-weight: 600;
+           padding-bottom: 10px;
+        }
+        .work p{
+            font-size: 14px;
+            line-height: 1.5;
+            padding-bottom: 15px;
+        }
+        .work button{
+            padding: 10px;
+            background-color: blue;
+            color: #fafaf7;
+            border: 2px solid blue;
+            border-radius: 5px;
+            margin-bottom: 40px;
+            font-size: 17px;
+        }
+        .about{
+            background-image: url(./Images/last\ image.jpg);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 71vh;
+        }
+        .blend{
+            display: flex;
+            gap: 45px;
+            background-color: #fdfcfc8a;
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 1660px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            height: 71vh;
+        }
+        .about h3{
+            padding-top: 140px;
+            padding-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 0 0 5px blue;
+        }
+        .about p{
+            font-size: 14px;
+            padding-bottom: 20px;
+            height: 8px;
+            width: 450px;
+            color: #06065c;
+            text-align: justify;
+        }
+        .about p span{
+            font-weight: 700;
+        }
+        .about button{
+            margin-top: 90px;
+            padding: 10px;
+            background-color: blue;
+            color: #fafaf7;
+            border: 2px solid blue;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+        <li id="site"><a href="#">My Site</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Features</a></li>
+        <li id="text"><a href="#">Contacts</a></li>
+        </ol>
+    </nav>
+    <div class="intro">
+    <div class="overlay">
+    <h2>Company Template</h2>
+    <p>We help organizations to hire, satisfy, motivate, and retain thier employees.</p>
+    <button>Learn Now</button>
+    </div>
+    </div>
+    <h2 class="sub">Why Choose Us</h2>
+    <div class="Choose">
+        <div class="matter">
+            <a href="#"><i class='bx bxs-heart'></i></a>
+            <h3>Privacy Matters</h3>
+            <p>Privacy is important. We don't share the info about our clients and you're always in control about their permission.</p>
+            <button>Read More</button>
+        </div>
+        <div>
+            <a href="#"><i class='bx bxs-briefcase-alt'></i></a>
+            <h3>Experience</h3>
+            <p>We worked with more than one hundred companies to help them manage their human resources.</p>
+            <button>Read More</button>
+        </div>
+        <div class="term">
+            <a href="#"><i class='bx bxs-camera-plus'></i></a>
+            <h3>Various Term Lengths</h3>
+            <p>You can set the needed duration of Long-term, Short-term, or a meeting term with our expert needed services.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+    <h2 class="sub" id="work">Our Work</h2>
+    <div class="work">
+        <div id="consult">
+            <img src="./Images/hr consult.jpg" alt="Office" class="img">
+            <h3>HR Consulting</h3>
+            <h4>Employees who approach their position</h4>
+            <p>We build social diagrams and test employees to determine their best qualities and development needs.</p>
+            <button>Read More</button>
+        </div>
+        <div>
+            <img src="./Images/Hiring.jpg" alt="A Worker" class="img">
+            <h3>Hiring</h3>
+            <h4>Employees directly affect performance</h4>
+            <p>We carry out the selection of employees for companies with different needs from staff to CVs. There are headhunters in our staff.</p>
+            <button>Read More</button>
+        </div>
+        <div id="employ">
+            <img src="./Images/employment testing.jpg" alt="Team work" class="img" id="test">
+            <h3>Employment testing</h3>
+            <h4>Best feedback that is objective</h4>
+            <p>Our psychologists are qualified to conduct a variety of employment tests to examine cognitive and soft skills.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+    <div class="about">
+        <div class="blend">
+        <div id="room"><img src="./Images/aboutus image.jpg" alt="Conference room"></div>
+        <div>
+            <h3>About Us</h3>
+            <p>The company was founded by <span>John Jude </span>and <span>Eve Frank</span> in <span>2006</span>. And now we have more than 30 experts, with outstanding technical knowledge, to serve you best way you can ever imagine. <br><br>Our values are; the humanistic approach, system thinking, creativity and development.</p>
+            <button>Learn Now</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

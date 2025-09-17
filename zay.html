@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAY</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:sans-serif;
+            scroll-padding: 200px;
+            scroll-behavior: smooth;
+        }
+        .head {
+            display: inline-flex;
+            background-color: #111174;
+            color: white;
+            padding: 8px;
+            margin-right:20px ;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .head a{
+            color: white;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        #mail{
+            margin-left: 300px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        #call{
+             margin-right: 550px;
+             font-size: 12px;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 90;
+        }
+        .nav  li{
+            list-style-type: none;
+            padding-top: 50px;
+            padding-bottom: 10px;
+        } 
+        .nav  li a{
+            text-decoration: none;
+            font-size: 18px;
+            color: #111174;
+            font-weight: 500;
+        } 
+        .scroll{
+            display: inline-flex;
+            gap: 20px;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+        .bxs-user{
+            font-size: 30px;
+            padding-top: -10px;
+        }
+        .bxs-cart-add{
+            font-size: 30px;
+            padding-top: -20px;
+        }
+        .bx-search{
+            font-size: 28px;
+            padding-top: -20px;
+        }
+        .digit{
+            font-size: 13px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #bebdbd;
+            padding-top:  6px;
+            padding-bottom: 10px;
+            padding-left: 9px;
+            padding-right: 9px;
+            position: absolute;
+            top: 52px;
+            right: 185px;
+        }
+        .badge{
+            font-size: 13px;
+            border-radius: 10px;
+            background-color: #bebdbd;
+            padding: 3px;
+            padding-left: 7px;
+            padding-right: 7px;
+            position: absolute;
+            top: 55px;
+            left: 1182px;
+        }
+        .Zay{
+            margin-left: 200px;
+            margin-right: 250px;
+            color: #77eb04;
+            font-weight: 700;
+            font-size: 42px;
+            text-shadow: 0 0 5px blue;
+        }
+        
+        #talk{
+            margin-right: 250px;
+        }
+        .come{
+            padding-top: 270px;
+            margin-left: 50px;
+        }
+        .come h1{
+            padding-bottom: 10px;
+        }
+        #plus{
+            font-size: 35px ;
+            color: #02e715b6;
+            font-weight: 700;
+        }
+        #minus{
+            color: #02e715a2;
+            font-weight: 100;
+            font-family:'Times New Roman', Times, serif ;
+        }
+        .come h3{
+            padding-bottom: 10px;
+            font-weight: 100;
+        }
+        .first{
+            background:linear-gradient(to bottom,#eaeaea,#efefef);
+        }
+        .write{
+            display: flex;
+            gap: 15px;
+            margin-bottom: -30px;
+        }
+        .arrowleft{
+            margin-left: 5px;
+            padding-top: 320px;
+            font-size: 80px;
+            color: #02e715b6;
+        }
+        .arrowright{
+            padding-top: 320px;
+            font-size: 80px;
+            color: #02e715b6;
+        }
+        #dash{
+            font-size: 60px;
+            display: inline-block;
+            padding-bottom: 50px;
+            margin-left: 530px;
+            color: #02e715b6;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        #dash span{
+            color: #69fd067c;
+        }
+        .write img{
+            width: 48vw;
+            height: 72vh;
+            padding-top: 95px;
+            border: 8px solid linear gradient(from bottom,#eaeaea,#efefef) ;
+            margin-right: -20px;
+            padding-left: 5px;
+        }
+        .write p{
+            width: 430px;
+            height: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+            padding-top: 5px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        h2{
+            text-align: center;
+            font-size: 32px;
+            font-weight: 500;
+            padding-top: 50px;
+            padding-bottom: 10px;
+        }
+        .third h2{
+            margin-top: 150px;
+        }
+        .two{
+            text-align: center;
+            font-size: 14px;
+            padding-bottom: 25px;
+        }
+        .picture{
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgb(228, 228, 231);
+            border-radius: 50%;
+        }
+        .category ul{
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        #black{
+            margin-left: 200px;
+        }
+        .category ul li p{
+            font-size: 18px;
+            padding-top: 10px;
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        #dark{
+           margin-left: 120px;
+           padding-bottom: 25px;
+        }
+        #darktwo{
+           margin-left: 105px;
+        }
+        #wear{
+            margin-left: 135px;
+            padding-bottom: 25px;
+        }
+        #weartwo{
+            margin-left: 109px;
+        }
+        #jew{
+            margin-left: 114px;
+            padding-bottom: 25px;
+        }
+        #jewtwo{
+            margin-left: 112px;
+        }
+        .category ul li{
+            list-style-type: none;
+        }
+        .category ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            background-color: #02e715b6;
+            border: 2px solid #04c514b6;
+            border-radius: 5px;
+            padding: 13px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .image{
+            width: 250px;
+            height: 200px;
+            padding-bottom: 10px;
+        }
+        .product{
+            display: flex;
+            padding-bottom: 50px;
+            gap: 20px;
+        }
+        .product p a{
+            color: rgb(235, 235, 3);
+        }
+        .icon{
+            color: #bebdbd;
+        }
+        .torch{
+            margin-left: 280px;
+            border: 2px solid #dddcdc;
+            background-color: #fffdfd;
+        }
+        .camera{
+            margin-right: 290px;
+            border: 2px solid #dddcdc;
+            background-color: #fcfafa;
+        }
+        .redwatch{
+            border: 2px solid #dbdada;
+            background-color: #fcfafa;
+        }
+        .star{
+            font-size: 15px;
+            padding-bottom: 10px;
+            padding: 8px;
+            font-weight: 300;
+        }
+        .Lorem{
+            font-size: 13px;
+            padding-bottom: 10px;
+            padding: 8px;
+            font-weight: 300;
+        }
+        .review{
+            padding-top: 5px;
+            font-size: 14px;
+            text-align: center;
+            color: #111174;
+            padding-bottom: 10px;
+        }
+        .item{
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            padding: 8px;
+        }
+        .dollar{
+            margin-left: 95px;
+            font-size: 14px;
+            color: #7e7c7c;
+        }
+        .third{
+            background:linear-gradient(to bottom,#eaeaea,#efefef);
+        }
+        .below{
+            display: flex;
+            gap: 100px;
+            padding-bottom: 10px;
+            background-color: #040450;
+            color: #fdfafa;
+        }
+        .below ol li{
+            list-style-type: none;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: lighter;
+        }
+        .below ol li a{
+            font-size: 18px;
+            color: #fdfcfc;
+        }
+        .shop{
+            margin-left: 280px;
+        }
+        .below h4{
+            padding-bottom: 8px;
+            border-bottom: 3px solid #7e7c7c;
+            margin-bottom: 10px;
+            padding-top: 15px;
+        }
+        #buy{
+            color: #77eb04;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <p id="mail"><a href="#"><i class='bx bx-envelope'></i></a>info@company.com</p>
+        <p id="call"><a href="#"><i class='bx bxs-phone-call'></i></a>010-020-0340</p>
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+    </div>
+    <div class="nav">
+            <li class="Zay">Zay</li>
+            <div class="scroll"><li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li id="talk"><a href="#">Contact</a></li>
+            <li><a href="#" ><i class='bx bx-search'></i></a></li>
+            <li><a href="#" class="main"  ><i class='bx bxs-cart-add'></i></a><span class="digit">7</span></li>
+            <li><a href="#" class="main"  ><i class='bx bxs-user'></i></a><span class="badge">+99</span></li></div>
+    </div>
+    <div>
+    <div class="first">
+    <div class="write">
+        <div class="arrowleft"><i class='bx bx-chevron-left'></i></div>
+      <div class="come">
+        <h1><span id="plus">Zay</span><span id="minus"> eCommerce</span></h1>
+    <h3>Tiny and Perfect eCommerce Template</h3>
+    <p>Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 beta 1. This template is free for you to use for your business website. Image credits go to Unsplash, Pexels, and Iconify. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt molestias esse minus consectetur at accusantium error consequatur, iure recusandae perspiciatis debitis tempora, illo adipisci sint? Dolore soluta aperiam consectetur alias.</p> </div>
+    <div><img src="./Images/white shoe2.jpg" alt="white shoe"></div>
+    <div class="arrowright"><i class='bx bx-chevron-right'></i></div>
+    </div>
+    <p id="dash">_ <span>_ _ </span></p>
+    </div>
+    <h2>Categories Of The Month</h2>
+    <p class="two">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br>officia deserunt mollit anim id est laborum.
+</p>
+   <div class="category">
+    <ul>
+    <li id="black"><img src="./Images/black watch.jpg" alt="black watch" class="picture"><p id="dark">Watches </p><a href="#" id="darktwo">Go Shop</a></li>
+    <li><img src="./Images/black shoe.jpg" alt="black shoe" class="picture"><p id="wear">Shoes </p><a href="#" id="weartwo">Go Shop</a></li>
+    <li><img src="./Images/glasses.jpg" alt="glasses" class="picture"><p id="jew">Accessories </p><a href="#" id="jewtwo">Go Shop</a></li>
+    </ul>
+   </div>
+   <div class="third">
+   <h2>Featured Product</h2>
+    <p class="two"> Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla <br> pariatur.
+    Excepteur sint occaecat cupidatat non proident.</p>
+    <div class="product">
+        <div class="torch">
+            <img src="./Images/torch.jpg" alt="torch" class="image">
+            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><span class="icon"><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span></a> <span class="dollar">$$240.00</span></p>
+            <p class="item">Gym Weight</p>
+            <p class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sunt in culpa qui officia deserunt.</p>
+            <p class="review">Reviews (24)</p>
+        </div>
+        <div class="redwatch">
+            <img src="./Images/red watch.jpg" alt="red watch" class="image">
+            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><span class="icon"><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span></a><span class="dollar">$$480.00</span></p>
+            <p class="item">Cloud Nike Shoes</p>
+            <p class="Lorem">Amet, gravida dignissim felis, nullam aliquam felis, eu turpis erat non, euismod ullamcorper.</p>
+            <p class="review">Reviews (40)</p>
+        </div>
+        <div class="camera">
+            <img src="./Images/camera.jpg" alt="like camera" class="image">
+            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></a><span class="dollar">$$360.00</span></p>
+            <p class="item">Summer Addides Shoes</p>
+            <p class="Lorem">Voluptatem, eu at erat non, justo porta, rhoncus pulvinar, augue diam, et scelerisque ipsum lobortis nec.</p>
+            <p class="review">Reviews(24)</p>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="below">
+            <div class="shop">
+                <h4 id="buy">Zay Shop</h4>
+                <ol>
+                 <li><a href="#"><i class='bx bx-location-plus'></i></a> 123 Consectetur at Ligula 10660</li>
+                 <li><a href="#"><i class='bx bxs-phone-call'></i></a> 010-020-0340</li>
+                 <li><a href="#"><i class='bx bx-envelope'></i></a> info@company.com</li>
+                </ol>
+            </div>
+            <div>
+                <h4>Produts</h4>
+                <ol>
+                   <li>Luxury</li>
+                   <li>Sport Wear</li>
+                   <li>Men's Shoes</li>
+                   <li>Women's Shoes</li>
+                   <li>Popular Dress</li>
+                   <li>Gym Accessories</li>
+                   <li>Sport Shoes</li>
+                </ol>
+            </div>
+            <div>
+                <h4>Further Info</h4>
+                <ol>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Shop Locations</li>
+                    <li>FAQs</li>
+                    <li>Contact</li>
+                </ol>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

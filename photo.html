@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(./Images/sunset.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        nav ul{
+            display: flex;
+            list-style-type: none;
+            gap: 30px;
+            padding: 50px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #Travel{
+            margin-right: 500px;
+            margin-left: 20px;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        h1{
+            color: white;
+            margin-top: 130px;
+            text-align: center;
+            font-size: 45px;
+            font-weight: bolder;
+        }
+        p{
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .watch{
+            display: flex;
+            gap: 20px;
+            margin-left: 450px;
+            margin-top: 50px;
+        }
+        .watch a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 30px;
+            padding-right: 60px;
+            padding-left: 60px;
+        }
+        footer{
+            margin-top: 149px;
+            padding: 0;
+        }
+        footer a{
+            color: white;
+            font-size: 40px;
+            margin-right: 40px;
+        }
+        #face{
+            margin-left: 150px;
+        }
+        #call{
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #call::after{
+            content: "";
+            position: absolute;
+            left: -8px;
+            bottom: -15px;
+            width: 0;
+            height: 4px;
+            background: white;
+        }
+        #call:hover::after{
+            width: 120%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="Travel"><a href="#">TRAVEL BLOG</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#" id="call">CONTACT</a></li>
+        </ul>
+    </nav>
+    <h1>Photography|Videography|Webdesign</h1>
+    <p>Subscribe DesignMediaX YouTube Channel to watch more Videos, <br> press the bell icon to get the latest updates</p>
+    <div class="watch">
+    <div><a href="#">Watch More</a></div>
+    <div><a href="#">Subscribe</a></div>
+    </div>
+    <footer>
+    <a href="#" id="face"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-twitter'></i></a>
+    <a href="#"><i class='bx bxl-instagram'></i></a>
+    </footer>
+</body>
+</html>
+
+
