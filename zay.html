@@ -38,7 +38,7 @@
              margin-right: 550px;
              font-size: 12px;
         }
-        .nav {
+        .nav ol {
             display: flex;
             gap: 20px;
             background-color: white;
@@ -47,22 +47,36 @@
             width: 100%;
             z-index: 90;
         }
-        .nav  li{
+        .scroll{
+            display: inline-flex;
+            gap: 15px;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+        .nav ol li{
             list-style-type: none;
             padding-top: 50px;
             padding-bottom: 10px;
         } 
-        .nav  li a{
+        .nav ol li a{
             text-decoration: none;
             font-size: 18px;
             color: #111174;
             font-weight: 500;
-        } 
-        .scroll{
-            display: inline-flex;
-            gap: 20px;
-            padding-top: 10px;
-            font-size: 16px;
+        }
+        .nav ol li a:hover{
+            color:rgb(3, 170, 3);
+        }
+        .Zay{
+            margin-left: 200px;
+            margin-right: 250px;
+            color: #77eb04;
+            font-weight: 700;
+            font-size: 42px;
+            text-shadow: 0 0 5px blue;
+        }
+        #talk{
+            margin-right: 250px;
         }
         .bxs-user{
             font-size: 30px;
@@ -88,7 +102,7 @@
             padding-right: 9px;
             position: absolute;
             top: 52px;
-            right: 185px;
+            right: 209px;
         }
         .badge{
             font-size: 13px;
@@ -99,19 +113,43 @@
             padding-right: 7px;
             position: absolute;
             top: 55px;
-            left: 1182px;
+            left: 1152px;
         }
-        .Zay{
-            margin-left: 200px;
-            margin-right: 250px;
-            color: #77eb04;
-            font-weight: 700;
-            font-size: 42px;
-            text-shadow: 0 0 5px blue;
+        .first{
+            background:linear-gradient(to bottom,#ededed,#e7e7e7,#e1e1e1);
         }
-        
-        #talk{
-            margin-right: 250px;
+        .write{
+            display: flex;
+            gap: 15px;
+            margin-bottom: -30px;
+        }
+        .write img{
+            width: 48vw;
+            height: 72vh;
+            padding-top: 95px;
+            margin-right: -20px;
+            padding-left: 5px;
+        }
+        .write p{
+            width: 430px;
+            height: 8px;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+            padding-top: 5px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        .arrowleft{
+            margin-left: 5px;
+            padding-top: 320px;
+            font-size: 80px;
+            color: #02e715b6;
+        }
+        .arrowright{
+            padding-top: 320px;
+            font-size: 80px;
+            color: #02e715b6;
         }
         .come{
             padding-top: 270px;
@@ -134,25 +172,6 @@
             padding-bottom: 10px;
             font-weight: 100;
         }
-        .first{
-            background:linear-gradient(to bottom,#eaeaea,#efefef);
-        }
-        .write{
-            display: flex;
-            gap: 15px;
-            margin-bottom: -30px;
-        }
-        .arrowleft{
-            margin-left: 5px;
-            padding-top: 320px;
-            font-size: 80px;
-            color: #02e715b6;
-        }
-        .arrowright{
-            padding-top: 320px;
-            font-size: 80px;
-            color: #02e715b6;
-        }
         #dash{
             font-size: 60px;
             display: inline-block;
@@ -165,24 +184,6 @@
         #dash span{
             color: #69fd067c;
         }
-        .write img{
-            width: 48vw;
-            height: 72vh;
-            padding-top: 95px;
-            border: 8px solid linear gradient(from bottom,#eaeaea,#efefef) ;
-            margin-right: -20px;
-            padding-left: 5px;
-        }
-        .write p{
-            width: 430px;
-            height: 8px;
-            font-size: 14px;
-            line-height: 1.5;
-            text-align: justify;
-            padding-top: 5px;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
         h2{
             text-align: center;
             font-size: 32px;
@@ -190,19 +191,10 @@
             padding-top: 50px;
             padding-bottom: 10px;
         }
-        .third h2{
-            margin-top: 150px;
-        }
         .two{
             text-align: center;
             font-size: 14px;
             padding-bottom: 25px;
-        }
-        .picture{
-            width: 300px;
-            height: 300px;
-            border: 2px solid rgb(228, 228, 231);
-            border-radius: 50%;
         }
         .category ul{
             display: flex;
@@ -211,6 +203,12 @@
         }
         #black{
             margin-left: 200px;
+        }
+        .picture{
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgb(228, 228, 231);
+            border-radius: 50%;
         }
         .category ul li p{
             font-size: 18px;
@@ -253,18 +251,36 @@
             padding-left: 20px;
             padding-right: 20px;
         }
-        .image{
-            width: 250px;
-            height: 200px;
-            padding-bottom: 10px;
+        .category ul li a:hover{
+            color: #111174;
+            background-color: #efefef;
+            box-shadow: 0 0 20px #02e715b6;
+            transition: 1s;
         }
         .product{
             display: flex;
             padding-bottom: 50px;
             gap: 20px;
         }
+        .third{
+            background:linear-gradient(to bottom,#eaeaea,#efefef);
+        }
+        .image{
+            width: 250px;
+            height: 200px;
+            padding-bottom: 10px;
+        }
+        .third h2{
+            margin-top: 150px;
+        }
         .product p a{
             color: rgb(235, 235, 3);
+        }
+        .star{
+            font-size: 15px;
+            padding-bottom: 10px;
+            padding: 8px;
+            font-weight: 300;
         }
         .icon{
             color: #bebdbd;
@@ -283,11 +299,16 @@
             border: 2px solid #dbdada;
             background-color: #fcfafa;
         }
-        .star{
-            font-size: 15px;
+        .dollar{
+            margin-left: 95px;
+            font-size: 14px;
+            color: #7e7c7c;
+        }
+        .item{
+            font-size: 16px;
+            font-weight: 600;
             padding-bottom: 10px;
             padding: 8px;
-            font-weight: 300;
         }
         .Lorem{
             font-size: 13px;
@@ -299,28 +320,14 @@
             padding-top: 5px;
             font-size: 14px;
             text-align: center;
-            color: #111174;
+            color: #9b9a9a;
             padding-bottom: 10px;
-        }
-        .item{
-            font-size: 16px;
-            font-weight: 600;
-            padding-bottom: 10px;
-            padding: 8px;
-        }
-        .dollar{
-            margin-left: 95px;
-            font-size: 14px;
-            color: #7e7c7c;
-        }
-        .third{
-            background:linear-gradient(to bottom,#eaeaea,#efefef);
         }
         .below{
             display: flex;
             gap: 100px;
             padding-bottom: 10px;
-            background-color: #040450;
+            background-color: #03033d;
             color: #fdfafa;
         }
         .below ol li{
@@ -333,17 +340,17 @@
             font-size: 18px;
             color: #fdfcfc;
         }
+        #buy{
+            color: #77eb04;
+        }
         .shop{
             margin-left: 280px;
         }
         .below h4{
             padding-bottom: 8px;
-            border-bottom: 3px solid #7e7c7c;
+            border-bottom: 2px solid #7e7c7c;
             margin-bottom: 10px;
             padding-top: 15px;
-        }
-        #buy{
-            color: #77eb04;
         }
     </style>
 </head>
@@ -357,6 +364,7 @@
         <a href="#"><i class='bx bxl-linkedin-square'></i></a>
     </div>
     <div class="nav">
+        <ol>
             <li class="Zay">Zay</li>
             <div class="scroll"><li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -364,7 +372,9 @@
             <li id="talk"><a href="#">Contact</a></li>
             <li><a href="#" ><i class='bx bx-search'></i></a></li>
             <li><a href="#" class="main"  ><i class='bx bxs-cart-add'></i></a><span class="digit">7</span></li>
-            <li><a href="#" class="main"  ><i class='bx bxs-user'></i></a><span class="badge">+99</span></li></div>
+            <li><a href="#" class="main"  ><i class='bx bxs-user'></i></a><span class="badge">+99</span></li>
+            </ol>
+        </div>
     </div>
     <div>
     <div class="first">
@@ -374,7 +384,7 @@
         <h1><span id="plus">Zay</span><span id="minus"> eCommerce</span></h1>
     <h3>Tiny and Perfect eCommerce Template</h3>
     <p>Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 beta 1. This template is free for you to use for your business website. Image credits go to Unsplash, Pexels, and Iconify. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt molestias esse minus consectetur at accusantium error consequatur, iure recusandae perspiciatis debitis tempora, illo adipisci sint? Dolore soluta aperiam consectetur alias.</p> </div>
-    <div><img src="./Images/white shoe2.jpg" alt="white shoe"></div>
+    <div><img src="./Images/white shoe2.png" alt="white shoe"></div>
     <div class="arrowright"><i class='bx bx-chevron-right'></i></div>
     </div>
     <p id="dash">_ <span>_ _ </span></p>
@@ -396,21 +406,21 @@
     <div class="product">
         <div class="torch">
             <img src="./Images/torch.jpg" alt="torch" class="image">
-            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><span class="icon"><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span></a> <span class="dollar">$$240.00</span></p>
+            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><span class="icon"><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span></a> <span class="dollar">$240.00</span></p>
             <p class="item">Gym Weight</p>
             <p class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sunt in culpa qui officia deserunt.</p>
             <p class="review">Reviews (24)</p>
         </div>
         <div class="redwatch">
             <img src="./Images/red watch.jpg" alt="red watch" class="image">
-            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><span class="icon"><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span></a><span class="dollar">$$480.00</span></p>
+            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><span class="icon"><i class='bx bxs-star'></i><i class='bx bxs-star'></i></span></a><span class="dollar">$480.00</span></p>
             <p class="item">Cloud Nike Shoes</p>
             <p class="Lorem">Amet, gravida dignissim felis, nullam aliquam felis, eu turpis erat non, euismod ullamcorper.</p>
             <p class="review">Reviews (40)</p>
         </div>
         <div class="camera">
             <img src="./Images/camera.jpg" alt="like camera" class="image">
-            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></a><span class="dollar">$$360.00</span></p>
+            <p class="star"><a href="#"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></a><span class="dollar">$360.00</span></p>
             <p class="item">Summer Addides Shoes</p>
             <p class="Lorem">Voluptatem, eu at erat non, justo porta, rhoncus pulvinar, augue diam, et scelerisque ipsum lobortis nec.</p>
             <p class="review">Reviews(24)</p>
